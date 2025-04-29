@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",               // Converte para ES6
+    "module": "commonjs",          // Usado no Node.js
+    "rootDir": "./src",            // Onde estão seus .ts
+    "outDir": "./build",            // Onde gerar os .js
+    "strict": true,                // Ativa verificação forte
+    "esModuleInterop": true        // Permite importar libs do CommonJS
+  },
+  "include": ["src"],              // Compila só os arquivos de src
+  "exclude": ["node_modules"]      // Ignora node_modules
+}

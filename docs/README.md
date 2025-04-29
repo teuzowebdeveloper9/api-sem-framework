@@ -21,13 +21,29 @@ nome do podcast
 nome do episodio
 imagem de capa
 link 
+categoria
 
-´´´ js
-
+```js
 {
-    podcastname: 'inteligencia limitada',
+    [
+     podcastname: "inteligencia limitada ",
+     videoid: "Aon4liqDw",
+    episode : "DEBATE: PAULO KOGOS X MARCELO BRIGADEIRO (+NANDO MOURA) - Inteligência Ltda. Podcast #1010 ",
+    cover: "src="https://i.ytimg.com/vi/J-Aon4liqDw/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAFabPzJuIPVCt-oM4ZglbjtiomuQ",
+    link: "https://www.youtube.com/live/J-Aon4liqDw?si=20wZhbX_UESNgsQx"
+    categorie: ["humor" , "mentalidade "]  
+     ],
+     [
+        podcastname:"flow podcast",
+        videoid: "1woQLtKzbPo"
+        episode:"MINHA NAMORADA QUASE BEIJOU MEU IRMÃO GÊMEO [Willou e Watson] - Flow #437"
+        cover:"src="https://i.ytimg.com/vi/1woQLtKzbPo/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAolFd39zLTd3q3wPAieunqo-07aA " ,
+        link:"https://www.youtube.com/live/1woQLtKzbPo?si=K1GVVhAISIepIibK",
+        categorie["humor","mentalidae","lifestyle"]
+     ]
+   
 }
 
 
-´´´
+```
 
