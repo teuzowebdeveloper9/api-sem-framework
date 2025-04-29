@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc && npm run copy-files",
+    "copy-files": "copy src\\repositories\\podcasts.json build\\repositories\\podcasts.json",
+    "dev": "tsc && npm run copy-files && node build/serve.js",
+    "start": "node build/serve.js"
   },
   "keywords": [],
   "author": "",
@@ -11,5 +14,9 @@
   "description": "",
   "dependencies": {
     "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "undici-types": "^7.8.0"
   }
 }
