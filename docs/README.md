@@ -17,5 +17,17 @@ filtrar episodios por nomes de podcasts
 ---
 # como vai retornar ?
 
+nome do podcast
+nome do episodio
+imagem de capa
+link 
 
+´´´ js
+
+{
+    podcastname: 'inteligencia limitada',
+}
+
+
+´´´
 
