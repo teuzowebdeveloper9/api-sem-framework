@@ -3,6 +3,12 @@
 Bem-vindo à **API Sem Framework**! Este projeto demonstra como construir uma API RESTful em Node.js utilizando apenas TypeScript e módulos nativos, sem frameworks externos. Aqui você encontra boas práticas, organização em camadas, uso de enums para status HTTP e scripts personalizados para facilitar o desenvolvimento.
 
 ---
+leia também project.md para entender o raciocinio antes da criação da API
+
+leia os issues do projeto para entender como lidei com os problemas
+
+
+---
 
 ## Boas Práticas Utilizadas
 - **TypeScript** para tipagem forte e segurança no desenvolvimento.
