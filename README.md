@@ -41,7 +41,7 @@ import { http-methods } from './UTILS/http-methods';
      if (req.method === httpsMethods.GET && baseurl === Routes.FILTER_EPISODES) {
       await getFilterEpisodes(req, res);
      }
-
+```
 ---
 
 ## Arquitetura de Camadas
