@@ -26,6 +26,21 @@ O projeto possui um enum `statusCode` em `src/UTILS/status-code.ts` que centrali
 import { statusCode } from './UTILS/status-code';
 res.writeHead(statusCode.OK, { 'content-type': 'application/json' });
 ```
+---
+
+
+## Enums de http methods
+O projeto possui um enum `httpmethods` em `src/UTILS/http-methods.ts` que centraliza todos os principais http methods, tornando o código mais legível e padronizado. Exemplo de uso:
+```ts
+import { http-methods } from './UTILS/http-methods';
+
+ if (req.method === httpsMethods.GET && baseurl === Routes.LIST_EPISODES) {
+      await getListEpisodes(req, res);
+     }
+   
+     if (req.method === httpsMethods.GET && baseurl === Routes.FILTER_EPISODES) {
+      await getFilterEpisodes(req, res);
+     }
 
 ---
 
