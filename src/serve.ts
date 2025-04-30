@@ -1,20 +1,8 @@
 import * as http from 'http';
+import { app } from './APP/app';
 
-import {getFilterEpisodes, getListEpisodes} from './controllers/podcast-controller.js'
 
-const serve = http.createServer(async (req: http.IncomingMessage, res: http.ServerResponse) => {
-	
- const [baseurl, query] = req.url?.split('?') || [];
-
-  if (req.method === 'GET' && baseurl === "/api/list" ){
-   await getListEpisodes(req, res);
-  }
-
-  if (req.method === 'GET' && baseurl === "/api/episode"){
-   await getFilterEpisodes(req, res);
-  }
-
-});
+const serve = http.createServer(app);
 
 serve.listen(3000, () => {
   console.log('serve running on port 3000');    
