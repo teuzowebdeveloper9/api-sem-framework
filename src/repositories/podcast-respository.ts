@@ -17,7 +17,7 @@ podcastname?: string
 
     if (podcastname){
         jsonData = jsonData.filter((
-            (podcast: { podcastname: string; }) => podcast.podcastname === podcastname)
+            (podcast: { podcastname: string; }) => podcast.podcastname.toLowerCase() == podcastname.toLowerCase())
     );
     }
 

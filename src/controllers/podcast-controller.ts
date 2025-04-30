@@ -1,6 +1,7 @@
 import {IncomingMessage, ServerResponse} from "http"
 import { serviceListEpisodes } from "../services/list-episodes-podcasts.js";
 import { serviceFilterEpisodes } from "../services/filter-episodes-services.js";
+import { json } from "stream/consumers";
 
 
 export const getListEpisodes = async (req: IncomingMessage, res: ServerResponse): Promise<void> => {
@@ -11,12 +12,13 @@ export const getListEpisodes = async (req: IncomingMessage, res: ServerResponse)
     res.end(JSON.stringify(data));
 }
 
-export const  getFilterEpisodes = async(
+export async function getFilterEpisodes(
     req: IncomingMessage,
-    res: ServerResponse
-) =>{
-    const content = await serviceFilterEpisodes('podpah') 
+    res: ServerResponse) {
+    const querystring = req.url?.split('?p=')[1] ?? ''
+    
+    const content = await serviceFilterEpisodes(querystring);
 
-    res.writeHead(200, {'content-type': 'application/json'});
+    res.writeHead(200, { 'content-type': 'application/json' });
     res.end(JSON.stringify(content));
 }
